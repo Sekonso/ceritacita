@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <header class="container">
+      <nav-bar brandName="<%= brandName %>" currentPage="<%= page %>"> </nav-bar>
+    </header>
+
+    <main class="container">
+      <h1 class="text-center fw-bold py-4">Daftar Cerita</h1>
+      <story-list></story-list>
+      <story-modal></story-modal>
+    </main>
+
+    <footer class="container">
+      <footer-view></footer-view>
+    </footer>
+  </body>
+</html>
