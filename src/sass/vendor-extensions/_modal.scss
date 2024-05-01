@@ -1,0 +1,9 @@
+$bootstrap-blue: #007bff;
+
+.modal {
+  .modal-content {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 0 5px $bootstrap-blue;
+  }
+}

@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
 import data from "../data/data.json";
 
@@ -9,6 +10,7 @@ class StoryList extends LitWithoutShadowDom {
 
   constructor() {
     super();
+    updateWhenLocaleChanges(this);
 
     this.stories = data;
   }
@@ -22,7 +24,8 @@ class StoryList extends LitWithoutShadowDom {
     });
 
     return html`
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">${storiesElements}</div>
+      <h1 class="text-center fw-bold py-4">${msg(`Daftar Cerita`)}</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">${storiesElements}</div>
     `;
   }
 }

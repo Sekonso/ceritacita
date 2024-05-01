@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file target-language="es" source-language="id" original="lit-localize-inputs" datatype="plaintext">
+    <body>
+      <trans-unit id="s1e2ab5ddaa5585fc">
+        <source>Lihat detail</source>
+        <target>Ver detalle</target>
+      </trans-unit>
+      <trans-unit id="s347024ed1f8c841b">
+        <source>Daftar Cerita</source>
+        <target>Lista de Historias</target>
+      </trans-unit>
+      <trans-unit id="sae4cacfadda16c46">
+        <source>Tambahkan Ceritamu</source>
+        <target>Agrega tu historia</target>
+      </trans-unit>
+      <trans-unit id="seab46c9dc339f63f">
+        <source>Kirim</source>
+        <target>Enviar</target>
+      </trans-unit>
+      <trans-unit id="s749c72374d54863f">
+        <source>Tutup</source>
+        <target>Cerrar</target>
+      </trans-unit>
+      <trans-unit id="s2d34e59b6e0f37d8">
+        <source>Masukkan deskripsi ceritamu...</source>
+        <target>Ingresa la descripción de tu historia...</target>
+      </trans-unit>
+      <trans-unit id="s790d2be79cd3642c">
+        <source>Deskripsi harus diisi.</source>
+        <target>La descripción debe estar completada.</target>
+      </trans-unit>
+      <trans-unit id="s392e857053d5b3fd">
+        <source>Gambar</source>
+        <target>Imagen</target>
+      </trans-unit>
+      <trans-unit id="sdb29f7e6769ceb0f">
+        <source>Gambar harus dipilih.</source>
+        <target>Se debe seleccionar una imagen.</target>
+      </trans-unit>
+      <trans-unit id="sd17821dcb6ba2ff9">
+        <source>Profil Pengembang</source>
+        <target>Perfil del Desarrollador</target>
+      </trans-unit>
+      <trans-unit id="s2ba2f8aa54e220db">
+        <source>Nama saya Adriansyah, saya adalah seorang mahasiswa Teknik Informatika di Universitas
+        Pamulang. Pada proyek ini, saya membuat aplikasi website yang bernama "CeritaCita" untuk
+        berbagi cerita antar pengguna. Aplikasi ini dibuat untuk menyelesaikan salah satu syarat
+        untuk lulus dari kelas Dicoding "Belajar tools front-end intermediate"</source>
+        <target>Mi nombre es Adriansyah, soy estudiante de Ingeniería Informática en la Universidad de Pamulang.
+        En este proyecto, creé una aplicación web llamada "CeritaCita" para compartir historias entre usuarios.
+        Esta aplicación fue creada para cumplir con uno de los requisitos para graduarse de la clase de Dicoding
+        "Aprender herramientas front-end intermedias".</target>
+      </trans-unit>
+      <trans-unit id="sf29c187d9a394976">
+        <source>Detail cerita</source>
+        <target>Detalle de la historia</target>
+      </trans-unit>
+      <trans-unit id="s4b4c497a409d757e">
+        <source>Dibuat pada tanggal: <x id="0" equiv-text="${this._convertTime(this.story.createdAt)}"/></source>
+        <target>Creado en: <x id="0" equiv-text="${this._convertTime(this.story.createdAt)}"/></target>
+      </trans-unit>
+      <trans-unit id="s5fae657c633254f7">
+        <source>Bahasa</source>
+        <target>Idioma</target>
+      </trans-unit>
+      <trans-unit id="s772ce5f935d58e37">
+        <source>Deskripsi</source>
+        <target>descripción</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

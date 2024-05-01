@@ -6,3 +6,4 @@ import "./StoryModal";
 import "./StoryForm";
 import "./ProfileView";
 import "./FooterView";
+import "./LanguageSelect";

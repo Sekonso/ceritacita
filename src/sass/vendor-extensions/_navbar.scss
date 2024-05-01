@@ -1,0 +1,21 @@
+$bootstrap-blue: #007bff;
+
+.navbar {
+  .navbar-brand {
+    font-family: "Pacifico", cursive;
+    font-size: 2.25rem;
+    margin-right: 1.5rem;
+  }
+
+  .nav-link {
+    &.active {
+      font-weight: 700;
+    }
+
+    &:hover,
+    &.active:hover {
+      color: $bootstrap-blue;
+      border-bottom: 1px solid $bootstrap-blue;
+    }
+  }
+}

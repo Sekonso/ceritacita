@@ -1,8 +1,10 @@
 import { LitElement, html, css } from "lit";
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 
 class ProfileView extends LitElement {
   constructor() {
     super();
+    updateWhenLocaleChanges(this);
   }
 
   static styles = css`
@@ -30,13 +32,13 @@ class ProfileView extends LitElement {
 
   render() {
     return html`
-      <h1>Profil Pengembang</h1>
+      <h1>${msg(`Profil Pengembang`)}</h1>
       <img src="https://avatars.githubusercontent.com/u/84219085?v=4" alt="Dev profile image" />
       <p>
-        Nama saya Adriansyah, saya adalah seorang mahasiswa Teknik Informatika di Universitas
+        ${msg(`Nama saya Adriansyah, saya adalah seorang mahasiswa Teknik Informatika di Universitas
         Pamulang. Pada proyek ini, saya membuat aplikasi website yang bernama "CeritaCita" untuk
         berbagi cerita antar pengguna. Aplikasi ini dibuat untuk menyelesaikan salah satu syarat
-        untuk lulus dari kelas Dicoding "Belajar tools front-end intermediate"
+        untuk lulus dari kelas Dicoding "Belajar tools front-end intermediate"`)}
       </p>
     `;
   }

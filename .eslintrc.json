@@ -9,12 +9,14 @@
     "sourceType": "module"
   },
   "plugins": ["prettier"],
+  "ignorePatterns": ["src/generated/**"],
   "rules": {
     "no-console": "off",
     "no-useless-constructor": "off",
     "no-underscore-dangle": "off",
     "no-param-reassign": "off",
     "class-methods-use-this": "off",
+    "arrow-body-style": "off",
     "no-unused-vars": "warn",
     "prettier/prettier": [
       "error",

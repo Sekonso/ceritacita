@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
 
 class StoryModal extends LitWithoutShadowDom {
@@ -8,6 +9,7 @@ class StoryModal extends LitWithoutShadowDom {
 
   constructor() {
     super();
+    updateWhenLocaleChanges(this);
 
     this.story = {
       id: undefined,
@@ -30,7 +32,7 @@ class StoryModal extends LitWithoutShadowDom {
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Detail cerita</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">${msg(`Detail cerita`)}</h1>
             </div>
             <div class="modal-body">
               <img
@@ -40,11 +42,15 @@ class StoryModal extends LitWithoutShadowDom {
                 loading="lazy"
               />
               <h2>${this.story.name}</h2>
-              <p class="badge text-bg-secondary px-2">${this._convertTime(this.story.createdAt)}</p>
+              <p class="badge text-bg-secondary px-2">
+                ${msg(str`Dibuat pada tanggal: ${this._convertTime(this.story.createdAt)}`)}
+              </p>
               <p>${this.story.description}</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                ${msg(`Tutup`)}
+              </button>
             </div>
           </div>
         </div>
@@ -56,9 +62,8 @@ class StoryModal extends LitWithoutShadowDom {
     const date = new Date(timestamp);
 
     const options = {
-      weekday: "long",
       day: "numeric",
-      month: "long",
+      month: "numeric",
       year: "numeric",
     };
 

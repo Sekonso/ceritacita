@@ -43,7 +43,7 @@ class NavBar extends LitWithoutShadowDom {
                 currentPage=${this.currentPage}
               ></nav-link>
             </ul>
-            <button class="btn btn-primary"><i class="bi bi-plus-lg"></i> Tambah cerita</button>
+            <language-select></language-select>
           </div>
         </div>
       </nav>

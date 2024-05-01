@@ -1,0 +1,10 @@
+$bootstrap-blue: #007bff;
+
+.dropdown-menu {
+  border: 1px solid $bootstrap-blue;
+
+  .dropdown-item:hover {
+    background: $bootstrap-blue;
+    color: white;
+  }
+}

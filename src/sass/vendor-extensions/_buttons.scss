@@ -1,0 +1,17 @@
+@mixin swap-color {
+  color: var(--background-color);
+  background-color: var(--color);
+}
+
+.btn {
+  &.btn-primary,
+  &.btn-danger {
+    &:hover {
+      @include swap-color();
+    }
+  }
+
+  &:active {
+    @include swap-color();
+  }
+}

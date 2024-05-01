@@ -1,3 +1,4 @@
+import { msg, updateWhenLocaleChanges } from "@lit/localize";
 import { html } from "lit";
 import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
 
@@ -8,6 +9,7 @@ class StoryCard extends LitWithoutShadowDom {
 
   constructor() {
     super();
+    updateWhenLocaleChanges(this);
   }
 
   render() {
@@ -24,12 +26,12 @@ class StoryCard extends LitWithoutShadowDom {
           <p class="card-text text-truncate">${this.story.description}</p>
           <a
             href="#"
-            class="btn btn-primary"
+            class="btn btn-primary w-100"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
             @click=${this._changeModalDetail}
           >
-            Lihat detail
+            ${msg(`Lihat detail`)}
           </a>
         </div>
       </div>
