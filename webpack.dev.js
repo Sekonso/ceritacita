@@ -9,6 +9,7 @@ module.exports = merge(common, {
       directory: path.resolve(__dirname, "dist"),
     },
     client: {
+      logging: "none",
       overlay: {
         errors: true,
         warnings: false,

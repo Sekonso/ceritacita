@@ -1,5 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 main {
-  min-height: 65vh;
+  story-list {
+    .render-container {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
   story-card {
     display: flex;
@@ -9,8 +21,6 @@ main {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
+  padding-bottom: 1rem;
   margin-top: 3rem;
-  margin-bottom: 1rem;
 }

@@ -1,6 +1,6 @@
 import { msg, updateWhenLocaleChanges } from "@lit/localize";
 import { html } from "lit";
-import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
+import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
 
 class StoryCard extends LitWithoutShadowDom {
   static properties = {
@@ -14,32 +14,33 @@ class StoryCard extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <div class="card col" style="width: 18rem;">
+      <div class="card col">
         <img
           src=${this.story.photoUrl}
           class="card-img-top"
+          style="height: 15rem; object-fit: cover;"
           alt="${this.story.name}'s image"
           loading="lazy"
         />
         <div class="card-body">
           <h5 class="card-title text-truncate">${this.story.name}</h5>
           <p class="card-text text-truncate">${this.story.description}</p>
-          <a
-            href="#"
+          <button
             class="btn btn-primary w-100"
             data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-            @click=${this._changeModalDetail}
+            data-bs-target="#storyModal"
+            @click=${this._setStoryModalContent}
           >
             ${msg(`Lihat detail`)}
-          </a>
+          </button>
         </div>
       </div>
     `;
   }
 
-  _changeModalDetail() {
+  _setStoryModalContent() {
     document.querySelector("story-modal").story = this.story;
+    document.querySelector("story-modal").renderMode = "content";
   }
 }
 

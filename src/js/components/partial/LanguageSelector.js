@@ -1,8 +1,8 @@
 import { html } from "lit";
 import { msg, updateWhenLocaleChanges } from "@lit/localize";
-import { allLocales } from "../../generated/locale-codes";
-import { getLocale, setLocaleFromUrl } from "../localization";
-import LitWithoutShadowDom from "./base/LitWithoutShadowDom";
+import { allLocales } from "../../../generated/locale-codes";
+import { getLocale, setLocaleFromUrl } from "../../localization";
+import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
 
 class LanguageSelect extends LitWithoutShadowDom {
   constructor() {
