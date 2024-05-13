@@ -1,4 +1,4 @@
-import Stories from "../network/stories";
+import Stories from "../../network/stories";
 
 const Add = {
   async init() {
@@ -23,19 +23,16 @@ const Add = {
     try {
       document.querySelector("story-form").renderMode = "loading";
 
-      const data = this._getFormdata();
-      const res = await Stories.add({ ...data });
+      const res = await Stories.add(this._getFormdata());
 
       console.log(res);
-
       this._clearFormData();
       setTimeout(() => {
         document.querySelector("story-form").renderMode = "done";
       }, 5000);
     } catch (error) {
-      console.error(error);
       document.querySelector("story-form").renderMode = "error";
-      document.querySelector("story-form").errorMessage = error.response.data.message;
+      document.querySelector("story-form").errorMessage = error;
     }
   },
 

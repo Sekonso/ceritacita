@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { msg, updateWhenLocaleChanges } from "@lit/localize";
+import { msg, str, updateWhenLocaleChanges } from "@lit/localize";
 import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
 
 class StoryForm extends LitWithoutShadowDom {
@@ -57,7 +57,7 @@ class StoryForm extends LitWithoutShadowDom {
     if (this.renderMode === "error") {
       return html`
         <div class="alert alert-danger" role="alert">
-          ${msg(`Gagal menambahkan cerita: (error: ${this.errorMessage})`)}
+          ${msg(str`Gagal menambahkan cerita: (error: ${this.errorMessage})`)}
         </div>
       `;
     }

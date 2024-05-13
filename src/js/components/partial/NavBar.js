@@ -43,7 +43,8 @@ class NavBar extends LitWithoutShadowDom {
                 currentPage=${this.currentPage}
               ></nav-link>
             </ul>
-            <language-select></language-select>
+            <language-selector></language-selector>
+            <user-toggler class="ms-3"></user-toggler>
           </div>
         </div>
       </nav>

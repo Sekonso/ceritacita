@@ -1,6 +1,6 @@
 const Profile = {
   async init() {
-    console.log("success");
+    console.log("Initiated profile page");
   },
 };
 

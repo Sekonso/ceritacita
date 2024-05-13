@@ -82,6 +82,26 @@ module.exports = {
       ...htmlWebpackPluginConfig,
     }),
 
+    new HtmlWebpackPlugin({
+      filename: "auth/register.html",
+      template: path.resolve(__dirname, "src/views/auth/register.html"),
+      templateParameters: {
+        brandName: "CeritaCita",
+        page: "register",
+      },
+      ...htmlWebpackPluginConfig,
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: "auth/login.html",
+      template: path.resolve(__dirname, "src/views/auth/login.html"),
+      templateParameters: {
+        brandName: "CeritaCita",
+        page: "login",
+      },
+      ...htmlWebpackPluginConfig,
+    }),
+
     new CopyWebpackPlugin({
       patterns: [
         {

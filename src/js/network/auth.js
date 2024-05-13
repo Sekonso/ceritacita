@@ -1,12 +1,10 @@
 import axios from "axios";
 import Config from "../config/config";
-import Session from "../utils/session";
 
-// API request instance
+// API request intance
 const api = axios.create({
   baseURL: Config.baseURL,
-  timeout: 15000,
-  headers: { Authorization: `Bearer ${Session.getUserToken()}` },
+  timeout: 10000,
 });
 
 // Response handler
@@ -22,18 +20,14 @@ api.interceptors.response.use(undefined, (error) => {
   }
 });
 
-const Stories = {
-  async getAll() {
-    return api.get("/stories");
+const Auth = {
+  async register(data) {
+    return api.post("/register", data);
   },
 
-  async add(data) {
-    return api.post("/stories", data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+  async login(data) {
+    return api.post("/login", data);
   },
 };
 
-export default Stories;
+export default Auth;

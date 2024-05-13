@@ -42,7 +42,7 @@ class StoryList extends LitWithoutShadowDom {
   _renderError() {
     return html`
       <div class="render-container">
-        <h1 class="text-center fw-bold py-4">${msg(`Error`)}</h1>
+        <h1 class="text-center fw-bold py-4">Error</h1>
         <h2 class="text-center fw-regular py-2">${this.errorMessage || "Render error"}</h2>
       </div>
     `;

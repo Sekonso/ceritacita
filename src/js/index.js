@@ -8,12 +8,19 @@ import * as bootstrap from "bootstrap";
 import "./components/index";
 
 // Import pages logic{
-import Dashboard from "./pages/dashboard";
-import Profile from "./pages/profile";
-import Add from "./pages/add";
+import Dashboard from "./views/dashboard";
+import Register from "./views/auth/register";
+import Login from "./views/auth/login";
+import Profile from "./views/pages/profile";
+import Add from "./views/pages/add";
+
+// Utilities
+import UserAuthCheck from "./utils/userAuthCheck";
 
 const routes = {
   "/": Dashboard,
+  "/auth/register.html": Register,
+  "/auth/login.html": Login,
   "/pages/profile.html": Profile,
   "/pages/add.html": Add,
 };
@@ -31,6 +38,7 @@ const initPages = () => {
 };
 
 window.addEventListener("DOMContentLoaded", async () => {
+  UserAuthCheck.checkLoginState();
   initPages();
 
   const route = detectRoute();

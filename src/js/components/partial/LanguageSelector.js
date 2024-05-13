@@ -4,7 +4,7 @@ import { allLocales } from "../../../generated/locale-codes";
 import { getLocale, setLocaleFromUrl } from "../../localization";
 import LitWithoutShadowDom from "../base/LitWithoutShadowDom";
 
-class LanguageSelect extends LitWithoutShadowDom {
+class LanguageSelector extends LitWithoutShadowDom {
   constructor() {
     super();
     updateWhenLocaleChanges(this);
@@ -15,7 +15,7 @@ class LanguageSelect extends LitWithoutShadowDom {
       <div class="btn-group">
         <button
           type="button"
-          class="btn btn-primary dropdown-toggle"
+          class="btn dropdown-toggle border border-dark"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
@@ -25,7 +25,7 @@ class LanguageSelect extends LitWithoutShadowDom {
           ${allLocales.map((locale) => {
             return html`
               <li>
-                <a class="dropdown-item" href="#" @click=${this._changedLocale}> ${locale} </a>
+                <button class="dropdown-item" @click=${this._changedLocale}>${locale}</button>
               </li>
             `;
           })}
@@ -47,4 +47,4 @@ class LanguageSelect extends LitWithoutShadowDom {
   }
 }
 
-customElements.define("language-select", LanguageSelect);
+customElements.define("language-selector", LanguageSelector);

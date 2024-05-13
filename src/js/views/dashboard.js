@@ -15,9 +15,8 @@ const Dashboard = {
       storyList.stories = res.data.listStory;
       storyList.renderMode = "content";
     } catch (error) {
-      console.error("Error getting all stories data: ", error);
       storyList.renderMode = "error";
-      storyList.errorMessage = error.response.data.message || error.message;
+      storyList.errorMessage = error;
     }
   },
 };
