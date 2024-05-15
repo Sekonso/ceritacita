@@ -29,7 +29,8 @@ const Add = {
       this._clearFormData();
       setTimeout(() => {
         document.querySelector("story-form").renderMode = "done";
-      }, 5000);
+        window.location.href = "/";
+      }, 2000);
     } catch (error) {
       document.querySelector("story-form").renderMode = "error";
       document.querySelector("story-form").errorMessage = error;

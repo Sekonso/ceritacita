@@ -15,7 +15,6 @@ import Profile from "./views/pages/profile";
 import Add from "./views/pages/add";
 
 // Utilities
-import "./utils/firebase";
 import UserAuthCheck from "./utils/userAuthCheck";
 
 const routes = {
