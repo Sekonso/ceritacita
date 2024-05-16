@@ -22,13 +22,21 @@ Dengan kriteria:
 - Memiliki minimal 5 lit component
 - Menerapkan minimal 5 kustomisasi pada komponen Bootstrap (Opsional) (In progress)
 - Memiliki minimal 2 Lit component dengan shadow DOM
+- Memanfaatkan [story API](https://story-api.dicoding.dev/v1/#/) sebagai penyedia data
+- Menambahkan fitur autentikasi
+- HTTP client dengan axios
+- Menampilkan loading saat melakukan request
 - Menerapkan Lit Localization (Opsional) (In progress)
 - Menampilkan format tanggal yang mudah dibaca (Opsional)
 - Mengunggah proyek ke Github repository (Opsional)
+- Menampilkan feedback dan fitur password tambahan pada halaman autentikasi (opsional)
+- Menerapkan axios instance (opsional)
+- Menggunakan ESlint dan prettier (opsional)
+- CI/CD menggunakan github dan Firebase Hosting (opsional)
 
 ## Live Page
 
-[CeritaCita Story App](https://ceritacita-story-app.netlify.app/)
+[CeritaCita Story App](https://ceritacita.netlify.app/)
 
 ## Installation
 
@@ -37,7 +45,7 @@ Untuk menggunakan repository ini secara lokal silahkan install semua dependencie
 Menggunakan NPM
 
 ```bash
-  npm install
+  npm ci
 ```
 
 ## Script
